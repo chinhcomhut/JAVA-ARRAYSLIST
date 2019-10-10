@@ -11,10 +11,14 @@ public void addNewProduct(int id, String name, float price, String description){
       Products products = new Products(id,name,price,description);
       manageProduct.add(products);
 }
+
+
 public void editProduct(int index, Products newProduct){
       manageProduct.set(index,newProduct);
 }
+
 public void removeProduct(int index){
+
       manageProduct.remove(index);
 }
     public void searchProduct(String name) {
@@ -26,7 +30,7 @@ public void removeProduct(int index){
         }
     }
     private void getInfoProduct(int i) {
-        System.out.println("Info Product "+(i+1)+" : ");
+        System.out.println("Info Product "+i+" : ");
         System.out.println("Id: "+ manageProduct.get(i).getName());
         System.out.println("Price: "+manageProduct.get(i).getPrice());
         System.out.println("Description: "+manageProduct.get(i).getDescription()+"\n");
